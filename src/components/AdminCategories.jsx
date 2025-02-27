@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/table";
 import CreateUpdateCat from "./CreateUpdateCat";
 import DeleteButton from "./DeleteButton";
+import Image from "next/image";
 
 export const columns = [
   {
@@ -59,7 +60,7 @@ export const columns = [
     },
     cell: ({ row }) => {
       console.log(row?.original?.image);
-      return <img src={row?.original?.image} className="w-20 h-20" />;
+      return <Image src={row?.original?.image} className="w-20 h-20" />;
     },
   },
   {

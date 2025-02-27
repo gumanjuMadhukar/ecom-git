@@ -25,6 +25,7 @@ import { GanttChart, Heart, LayoutDashboard, ShoppingCart } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Separator } from "./ui/separator";
 import { logout } from "@/utils/actions";
+import Image from "next/image";
 
 const Header = ({ categories, session }) => {
   return (
@@ -32,7 +33,7 @@ const Header = ({ categories, session }) => {
       <Navbar />
       <div className="flex justify-between items-center h-20 px-[10%]">
         <Link href="/">
-          <img src="/logo.png" className="h-12 cursor-pointer" alt="" />
+          <Image src="/logo.png" className="h-12 cursor-pointer" alt="" />
         </Link>
         <div className="text-md flex items-center gap-5">
           <Link href="/" className="hidden sm:block">
@@ -132,7 +133,7 @@ const ListItem = forwardRef(
             {...props}
           >
             <div className="text-sm font-medium leading-none flex items-center gap-4">
-              <img src={image} alt="" className="h-8 w-8" />
+              <Image src={image} alt="" className="h-8 w-8" />
               <h2>{title}</h2>
             </div>
             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">

@@ -20,6 +20,7 @@ import { getCategories } from "@/services/categories";
 import { UploadDropzone } from "@/lib/uploadthing";
 import { addUpdatePost } from "@/services/posts";
 import { toast } from "./ui/use-toast";
+import Image from "next/image";
 
 const CreateUpdateProd = ({ children, product }) => {
   const form = useForm();
@@ -112,7 +113,7 @@ const CreateUpdateProd = ({ children, product }) => {
                 <div className="flex items-center gap-2">
                   {images?.map((img, index) => (
                     <div key={index}>
-                      <img src={img?.url || img} className="h-16 w-16" alt="" />
+                      <Image src={img?.url || img} className="h-16 w-16" alt="" />
                     </div>
                   ))}
                 </div>

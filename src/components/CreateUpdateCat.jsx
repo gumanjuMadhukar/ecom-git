@@ -15,6 +15,7 @@ import { UploadButton } from "@/lib/uploadthing";
 import { useEffect, useState } from "react";
 import { CreateCategory } from "@/services/categories";
 import { toast } from "./ui/use-toast";
+import Image from "next/image";
 
 const CreateUpdateCat = ({ children, category }) => {
   const [image, setImage] = useState("");
@@ -71,7 +72,7 @@ const CreateUpdateCat = ({ children, category }) => {
               />
             ) : (
               <div className="flex items-center gap-2">
-                <img src={image} className="h-16 w-16" alt="" />
+                <Image src={image} className="h-16 w-16" alt="" />
               </div>
             )}
           </div>

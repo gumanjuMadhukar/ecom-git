@@ -1,6 +1,7 @@
 "use client";
 import AddAddress from "@/components/AddAddress";
 import { setCart } from "@/redux/slice/cartSlice";
+import Image from "next/image";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -58,7 +59,7 @@ const Addtocart = () => {
             >
               <div className="flex w-2/5">
                 <div className="w-20">
-                  <img
+                  <Image
                     className="h-24"
                     src={item?.product?.images?.[0]}
                     alt=""
